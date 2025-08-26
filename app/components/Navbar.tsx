@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { auth, signIn, signOut } from '@/auth';
 
+
 const Navbar = async () => {
 
   const session = await auth();
@@ -21,9 +22,15 @@ const Navbar = async () => {
                 <span>Create</span>
               </Link>
 
-              <button onClick={() =>signOut}>
-                <span>Logout</span>
-              </button>
+              <form action={
+                async () => {
+                  'use server';
+
+                  await signOut();
+                }
+              }>
+                <button type='submit'>Logout</button>
+              </form>
 
               <Link href={`/user/${session?.user.id}`}>
                 <span>{session.user.name}</span>
@@ -31,13 +38,16 @@ const Navbar = async () => {
             </>
           ) : (
             <>
-              <button onClick={ async () => {
-                'use server';
+              <form action={
+                async () => {
+                  'use server';
 
-                await signIn('github');
-              }}>
-                <span>Login</span>
-              </button>
+                  await signIn('github');
+                }
+              }>
+
+                <button type='submit'>Login</button>
+              </form>
             </>
           )}
         </div>
