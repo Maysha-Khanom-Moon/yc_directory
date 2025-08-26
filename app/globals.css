@@ -19,6 +19,20 @@
   }
 }
 
+@layer utilities {
+
+  .pink_container {
+    @apply flex flex-col items-center justify-center text-center bg-gradient-to-b from-pink-600 via-pink-600 to-pink-500 py-12 px-4 sm:px-6 lg:px-8;
+  }
+
+  .heading {
+    @apply uppercase bg-black px-6 py-3 font-extrabold text-white sm:text-[54px] sm:leading-[64px] text-[36px] leading-[44px] max-w-5xl text-center my-5;
+  }
+  .sub-heading {
+    @apply font-medium text-[20px] text-white max-w-2xl text-center break-words;
+  }
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
