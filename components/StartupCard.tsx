@@ -23,6 +23,7 @@ const StartupCard = ({ post }: { post: Post }) => {
 
         <div className='flex gap-1.5'>
           <EyeIcon className='w-6 h-6 text-primary' />
+          <span className='text-16-medium'>{post.views}</span>
         </div>
       </div>
     </li>
