@@ -107,7 +107,23 @@
   }
 
   .startup-card_date {
-    @apply font-medium text-[16px] bg-gray-700 px-4 py-2 rounded-full group-hover:bg-gray-100;
+    @apply font-medium text-[16px] bg-pink-100 px-4 py-2 rounded-full group-hover:bg-gray-300;
+  }
+
+  .startup-card_desc {
+    @apply font-normal text-[16px] line-clamp-2 my-3 text-neutral-700 break-words;
+  }
+
+  .startup-card_img {
+    @apply w-full h-[164px] rounded-[10px] object-cover;
+  }
+
+  .card_grid {
+    @apply grid md:grid-cols-3 sm:grid-cols-2 gap-5;
+  }
+
+  .card_grid-sm {
+    @apply grid sm:grid-cols-2 gap-5;
   }
 
 }
