@@ -69,6 +69,7 @@ export default function RootLayout({
       <body
         className={workSans.variable}
         style={{ fontFamily: 'WorkSans, sans-serif' }} // Fallback font
+        suppressHydrationWarning
       >
         {children}
       </body>
