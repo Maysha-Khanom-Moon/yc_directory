@@ -40,7 +40,9 @@ export const STARTUP_BY_ID_QUERY = defineQuery(`
         _id,
         name,
         image,
-        bio
+        bio,
+        username,
+        email
     },
     views,
     description,
