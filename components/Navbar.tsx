@@ -29,7 +29,7 @@ const Navbar = async () => {
                   await signOut();
                 }
               }>
-                <button type='submit'>Logout</button>
+                <button className='cursor-pointer' type='submit'>Logout</button>
               </form>
 
               <Link href={`/user/${session?.user.id}`}>
@@ -46,7 +46,7 @@ const Navbar = async () => {
                 }
               }>
 
-                <button type='submit'>Login</button>
+                <button className='cursor-pointer' type='submit'>Login</button>
               </form>
             </>
           )}
