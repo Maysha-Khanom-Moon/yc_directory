@@ -161,7 +161,7 @@
   }
 
   .view-container {
-    @apply flex justify-end items-center mt-5 bottom-3 right-3;
+    @apply flex justify-end items-center mt-5 fixed bottom-3 right-3;
   }
 
   .view-text {
