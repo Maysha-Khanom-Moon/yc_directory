@@ -30,7 +30,7 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
         <div className='space-y-5 mt-10 max-w-4x mx-auto'>
           <div className='flex-between gap-5'>
             <Link href={`/user/${post.author._id}`} className='flex gap-2 items-center'>
-              <Image src={post.author.image} alt="avatar" width={64} height={64} className='rounded-full border-gray-200 border-2' />
+              <Image src={post.author.image} alt="avatar" width={64} height={64} className='rounded-full border-gray-200 border-2 shadow-lg' />
 
               <div>
                 <p className="text-20-medium">{post.author.name}</p>
@@ -38,8 +38,10 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
               </div>
             </ Link>
 
-            p
+            <p className="category-tag">{post.category}</p>
           </div>
+
+          <h3 className="text-30-bold mt-10">Pitch Details</h3>
         </div>
       </section>
     </>
